@@ -37,7 +37,7 @@
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>es.nachobrito.rag.aot.generated</micronaut.aot.packageName>
         <exec.mainClass>es.nachobrito.rag.Application</exec.mainClass>
-
+        <mn.jvmArgs>--add-modules=jdk.incubator.vector --enable-native-access=ALL-UNNAMED --enable-preview</mn.jvmArgs>
         <langchain4j.version>1.0.1</langchain4j.version>
         <jlama.version>0.8.3</jlama.version>
         <langchain4j-jlama.version>1.0.1-beta6</langchain4j-jlama.version>
