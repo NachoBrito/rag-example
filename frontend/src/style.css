@@ -1,0 +1,83 @@
+:root {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.1em;
+
+  color-scheme: light dark;
+  background-color: #fafafa;
+  color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.editor-toolbar button {
+    color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  color: #111;
+  border: 1px solid #aaa;
+  background-color: #fefefe;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#remo-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#remo-conversation {
+  flex-grow: 5;
+}
+
+#remo-textbox {
+  flex-grow: 1;
+  position: sticky;
+  bottom: 0;
+  background-color: #dddddd;
+  text-align: center;
+}
+#remo-textbox textarea {
+  width: 98%;
+  min-height: 100px;
+  margin: 5px;
+}
+#remo-textbox button {
+  margin: 5px 10px 10px 10px;
+  padding: 5px 10px;
+}
+#remo-conversation .chat {
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 10px;
+}
+#remo-conversation .bot {
+  margin-right: 0;
+  background: #fcc;
+}
+#remo-conversation .user {
+  margin-left: 0;
+  background: #cfc;
+}
