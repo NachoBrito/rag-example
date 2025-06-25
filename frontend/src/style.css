@@ -76,6 +76,8 @@ h1 {
 #remo-conversation .bot {
   margin-right: 0;
   background: #fcc;
+  font-family: monospace;
+  white-space: pre-wrap;
 }
 #remo-conversation .user {
   margin-left: 0;

@@ -170,8 +170,8 @@ public class LangChain4JRagService implements RagService {
     EmbeddingSearchRequest embeddingSearchRequest =
         EmbeddingSearchRequest.builder()
             .queryEmbedding(questionEmbedding)
-            .maxResults(3)
-            .minScore(0.7)
+            .maxResults(2)
+            .minScore(0.75)
             .build();
     return embeddingStore.search(embeddingSearchRequest).matches();
   }
