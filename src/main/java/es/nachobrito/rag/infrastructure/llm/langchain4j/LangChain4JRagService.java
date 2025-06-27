@@ -151,7 +151,11 @@ public class LangChain4JRagService implements RagService {
 
   private Prompt buildPrompt(RagQuery query) {
     List<EmbeddingMatch<TextSegment>> relevantEmbeddings = getRelevantEmbeddings(query);
-
+    if (relevantEmbeddings.isEmpty()) {
+      log.info(
+          "Could not find relevant documents for this query. Sending raw prompt to the model.");
+      return Prompt.from(query.text());
+    }
     String information =
         relevantEmbeddings.stream()
             .map(embeddingMatchMapper::map)
@@ -171,7 +175,7 @@ public class LangChain4JRagService implements RagService {
         EmbeddingSearchRequest.builder()
             .queryEmbedding(questionEmbedding)
             .maxResults(2)
-            .minScore(0.75)
+            .minScore(0.85)
             .build();
     return embeddingStore.search(embeddingSearchRequest).matches();
   }
